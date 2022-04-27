@@ -39,28 +39,28 @@ namespace PersonalInfoGui
             {
                 if (category == "Last Name")
                 {
-                    if (p.Last == searchString)
+                    if (p.Last.ToLower() == searchString.ToLower())
                     {
                         resultList.Add(p);
                     }
                 }
                 else if (category == "First Name")
                 {
-                    if (p.First == searchString)
+                    if (p.First.ToLower() == searchString.ToLower())
                     {
                         resultList.Add(p);
                     }
                 }
                 else if (category == "Phone Number")
                 {
-                    if (p.Phone == searchString)
+                    if (Helpers.ConvertPhone(p.Phone) == Helpers.ConvertPhone(searchString))
                     {
                         resultList.Add(p);
                     }
                 }
                 else if (category == "Email")
                 {
-                    if (p.Email == searchString)
+                    if (p.Email.ToLower() == searchString.ToLower())
                     {
                         resultList.Add(p);
                     }
