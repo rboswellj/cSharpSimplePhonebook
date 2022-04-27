@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Robert\\OneDrive\\Documents\\School\\CSharp\\cSharp2\\PersonalInfoGui\\PersonalInfoGui.csproj",
+      "projectUniqueName": "C:\\Users\\Robert\\Source\\Repos\\cSharpSimplePhonebook\\PersonalInfoGui.csproj",
       "projectName": "PersonalInfoGui",
-      "projectPath": "C:\\Users\\Robert\\OneDrive\\Documents\\School\\CSharp\\cSharp2\\PersonalInfoGui\\PersonalInfoGui.csproj",
+      "projectPath": "C:\\Users\\Robert\\Source\\Repos\\cSharpSimplePhonebook\\PersonalInfoGui.csproj",
       "packagesPath": "C:\\Users\\Robert\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Robert\\OneDrive\\Documents\\School\\CSharp\\cSharp2\\PersonalInfoGui\\obj\\",
+      "outputPath": "C:\\Users\\Robert\\Source\\Repos\\cSharpSimplePhonebook\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -71,7 +71,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -21,6 +21,7 @@ namespace PersonalInfoGui
         {
             InitializeComponent();
             PopulateListBox(people);
+            cmbSearch.SelectedIndex = 1;
         }
 
         private void PopulateListBox(List<Person> list)
@@ -28,6 +29,55 @@ namespace PersonalInfoGui
             foreach (Person p in list)
             {
                 directoryListBox.Items.Add(p.FullName);
+            }
+        }
+
+        private void Search(List<Person> fullList, string category, string searchString)
+        {
+            List<Person> resultList = new List<Person>();
+            foreach (Person p in fullList) 
+            {
+                if (category == "Last Name")
+                {
+                    if (p.Last == searchString)
+                    {
+                        resultList.Add(p);
+                    }
+                }
+                else if (category == "First Name")
+                {
+                    if (p.First == searchString)
+                    {
+                        resultList.Add(p);
+                    }
+                }
+                else if (category == "Phone Number")
+                {
+                    if (p.Phone == searchString)
+                    {
+                        resultList.Add(p);
+                    }
+                }
+                else if (category == "Email")
+                {
+                    if (p.Email == searchString)
+                    {
+                        resultList.Add(p);
+                    }
+                }
+            }
+            if (resultList.Count > 0)
+            {
+                directoryListBox.Items.Clear();
+                PopulateListBox(resultList);
+                directoryListBox.ClearSelected();
+            } 
+            else
+            {
+                MessageBox.Show("No Results");
+                directoryListBox.Items.Clear();
+                PopulateListBox(people);
+                directoryListBox.ClearSelected();
             }
         }
 
@@ -195,6 +245,20 @@ namespace PersonalInfoGui
                 this.Controls[field + "Box"].Text = "";
             }
 
+        }
+
+        private void BtnSearch_Click(object sender, EventArgs e)
+        {
+            string cat = cmbSearch.Text;
+            string search = txtSearch.Text;
+            Search(people, cat, search);
+        }
+
+        private void BtnClear_Click(object sender, EventArgs e)
+        {
+            directoryListBox.Items.Clear();
+            PopulateListBox(people);
+            directoryListBox.ClearSelected();
         }
     }
 }

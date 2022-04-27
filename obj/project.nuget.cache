@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8sPnX/WI//TMxMCYA6ENZ32X/B8ZLCY741Mx3CqTUGfa9QH/hWefbHeJMwLvPI8ATUd5mFEij+DwJo5axZkmYA==",
+  "dgSpecHash": "27yYWXkwW0d5hdmCjqxaP26GxhdIjsIhDcsfAPGkw65M0lHvVwkZzk5uX9CiPQ0giTkD8iMcvtQI9iZuKL5rjQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Robert\\OneDrive\\Documents\\School\\CSharp\\cSharp2\\PersonalInfoGui\\PersonalInfoGui.csproj",
+  "projectFilePath": "C:\\Users\\Robert\\Source\\Repos\\cSharpSimplePhonebook\\PersonalInfoGui.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

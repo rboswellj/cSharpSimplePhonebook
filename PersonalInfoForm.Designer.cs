@@ -29,7 +29,6 @@ namespace PersonalInfoGui
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.directoryListBox = new System.Windows.Forms.ListBox();
             this.firstInLabel = new System.Windows.Forms.Label();
             this.firstInBox = new System.Windows.Forms.TextBox();
@@ -44,22 +43,17 @@ namespace PersonalInfoGui
             this.addUserButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
             this.clearSelectionButton = new System.Windows.Forms.Button();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.cmbSearch = new System.Windows.Forms.ComboBox();
+            this.btnClear = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(31, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 32);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Directory";
             // 
             // directoryListBox
             // 
             this.directoryListBox.FormattingEnabled = true;
             this.directoryListBox.ItemHeight = 32;
-            this.directoryListBox.Location = new System.Drawing.Point(31, 84);
+            this.directoryListBox.Location = new System.Drawing.Point(33, 143);
             this.directoryListBox.Name = "directoryListBox";
             this.directoryListBox.Size = new System.Drawing.Size(578, 356);
             this.directoryListBox.TabIndex = 2;
@@ -68,7 +62,7 @@ namespace PersonalInfoGui
             // firstInLabel
             // 
             this.firstInLabel.AutoSize = true;
-            this.firstInLabel.Location = new System.Drawing.Point(21, 467);
+            this.firstInLabel.Location = new System.Drawing.Point(23, 514);
             this.firstInLabel.Name = "firstInLabel";
             this.firstInLabel.Size = new System.Drawing.Size(134, 32);
             this.firstInLabel.TabIndex = 3;
@@ -76,14 +70,14 @@ namespace PersonalInfoGui
             // 
             // firstInBox
             // 
-            this.firstInBox.Location = new System.Drawing.Point(26, 502);
+            this.firstInBox.Location = new System.Drawing.Point(28, 549);
             this.firstInBox.Name = "firstInBox";
             this.firstInBox.Size = new System.Drawing.Size(266, 39);
             this.firstInBox.TabIndex = 4;
             // 
             // middleInBox
             // 
-            this.middleInBox.Location = new System.Drawing.Point(26, 591);
+            this.middleInBox.Location = new System.Drawing.Point(28, 638);
             this.middleInBox.Name = "middleInBox";
             this.middleInBox.Size = new System.Drawing.Size(266, 39);
             this.middleInBox.TabIndex = 6;
@@ -91,7 +85,7 @@ namespace PersonalInfoGui
             // middleInLabel
             // 
             this.middleInLabel.AutoSize = true;
-            this.middleInLabel.Location = new System.Drawing.Point(21, 556);
+            this.middleInLabel.Location = new System.Drawing.Point(23, 603);
             this.middleInLabel.Name = "middleInLabel";
             this.middleInLabel.Size = new System.Drawing.Size(285, 32);
             this.middleInLabel.TabIndex = 5;
@@ -99,7 +93,7 @@ namespace PersonalInfoGui
             // 
             // lastInBox
             // 
-            this.lastInBox.Location = new System.Drawing.Point(26, 681);
+            this.lastInBox.Location = new System.Drawing.Point(28, 728);
             this.lastInBox.Name = "lastInBox";
             this.lastInBox.Size = new System.Drawing.Size(266, 39);
             this.lastInBox.TabIndex = 8;
@@ -107,7 +101,7 @@ namespace PersonalInfoGui
             // lastInLabel
             // 
             this.lastInLabel.AutoSize = true;
-            this.lastInLabel.Location = new System.Drawing.Point(26, 646);
+            this.lastInLabel.Location = new System.Drawing.Point(28, 693);
             this.lastInLabel.Name = "lastInLabel";
             this.lastInLabel.Size = new System.Drawing.Size(131, 32);
             this.lastInLabel.TabIndex = 7;
@@ -115,7 +109,7 @@ namespace PersonalInfoGui
             // 
             // phoneInBox
             // 
-            this.phoneInBox.Location = new System.Drawing.Point(343, 503);
+            this.phoneInBox.Location = new System.Drawing.Point(345, 550);
             this.phoneInBox.Name = "phoneInBox";
             this.phoneInBox.Size = new System.Drawing.Size(266, 39);
             this.phoneInBox.TabIndex = 10;
@@ -123,7 +117,7 @@ namespace PersonalInfoGui
             // phoneInLabel
             // 
             this.phoneInLabel.AutoSize = true;
-            this.phoneInLabel.Location = new System.Drawing.Point(343, 468);
+            this.phoneInLabel.Location = new System.Drawing.Point(345, 515);
             this.phoneInLabel.Name = "phoneInLabel";
             this.phoneInLabel.Size = new System.Drawing.Size(182, 32);
             this.phoneInLabel.TabIndex = 9;
@@ -131,7 +125,7 @@ namespace PersonalInfoGui
             // 
             // emailInBox
             // 
-            this.emailInBox.Location = new System.Drawing.Point(343, 592);
+            this.emailInBox.Location = new System.Drawing.Point(345, 639);
             this.emailInBox.Name = "emailInBox";
             this.emailInBox.Size = new System.Drawing.Size(266, 39);
             this.emailInBox.TabIndex = 12;
@@ -139,7 +133,7 @@ namespace PersonalInfoGui
             // emailInLabel
             // 
             this.emailInLabel.AutoSize = true;
-            this.emailInLabel.Location = new System.Drawing.Point(343, 556);
+            this.emailInLabel.Location = new System.Drawing.Point(345, 603);
             this.emailInLabel.Name = "emailInLabel";
             this.emailInLabel.Size = new System.Drawing.Size(76, 32);
             this.emailInLabel.TabIndex = 11;
@@ -147,7 +141,7 @@ namespace PersonalInfoGui
             // 
             // addUserButton
             // 
-            this.addUserButton.Location = new System.Drawing.Point(343, 674);
+            this.addUserButton.Location = new System.Drawing.Point(345, 721);
             this.addUserButton.Name = "addUserButton";
             this.addUserButton.Size = new System.Drawing.Size(266, 48);
             this.addUserButton.TabIndex = 13;
@@ -157,7 +151,7 @@ namespace PersonalInfoGui
             // 
             // deleteButton
             // 
-            this.deleteButton.Location = new System.Drawing.Point(343, 752);
+            this.deleteButton.Location = new System.Drawing.Point(345, 799);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(266, 48);
             this.deleteButton.TabIndex = 15;
@@ -167,7 +161,7 @@ namespace PersonalInfoGui
             // 
             // clearSelectionButton
             // 
-            this.clearSelectionButton.Location = new System.Drawing.Point(26, 752);
+            this.clearSelectionButton.Location = new System.Drawing.Point(28, 799);
             this.clearSelectionButton.Name = "clearSelectionButton";
             this.clearSelectionButton.Size = new System.Drawing.Size(266, 48);
             this.clearSelectionButton.TabIndex = 16;
@@ -175,11 +169,58 @@ namespace PersonalInfoGui
             this.clearSelectionButton.UseVisualStyleBackColor = true;
             this.clearSelectionButton.Click += new System.EventHandler(this.ClearSelectionButton_Click);
             // 
+            // txtSearch
+            // 
+            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9.7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtSearch.Location = new System.Drawing.Point(289, 37);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(216, 42);
+            this.txtSearch.TabIndex = 17;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(511, 37);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(99, 44);
+            this.btnSearch.TabIndex = 18;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
+            // 
+            // cmbSearch
+            // 
+            this.cmbSearch.Font = new System.Drawing.Font("Segoe UI", 9.7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cmbSearch.FormattingEnabled = true;
+            this.cmbSearch.ItemHeight = 36;
+            this.cmbSearch.Items.AddRange(new object[] {
+            "First Name",
+            "Last Name",
+            "Phone Number",
+            "Email"});
+            this.cmbSearch.Location = new System.Drawing.Point(33, 35);
+            this.cmbSearch.Name = "cmbSearch";
+            this.cmbSearch.Size = new System.Drawing.Size(250, 44);
+            this.cmbSearch.TabIndex = 19;
+            // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(399, 87);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(211, 44);
+            this.btnClear.TabIndex = 18;
+            this.btnClear.Text = "Clear Search";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.BtnClear_Click);
+            // 
             // PersonalInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(654, 824);
+            this.ClientSize = new System.Drawing.Size(659, 891);
+            this.Controls.Add(this.cmbSearch);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.clearSelectionButton);
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.addUserButton);
@@ -194,7 +235,6 @@ namespace PersonalInfoGui
             this.Controls.Add(this.firstInBox);
             this.Controls.Add(this.firstInLabel);
             this.Controls.Add(this.directoryListBox);
-            this.Controls.Add(this.label1);
             this.Name = "PersonalInfoForm";
             this.Text = "Personal Info Collector";
             this.ResumeLayout(false);
@@ -203,8 +243,6 @@ namespace PersonalInfoGui
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox directoryListBox;
         private System.Windows.Forms.Label firstInLabel;
         private System.Windows.Forms.TextBox firstInBox;
@@ -219,6 +257,10 @@ namespace PersonalInfoGui
         private System.Windows.Forms.Button addUserButton;
         private System.Windows.Forms.Button deleteButton;
         private System.Windows.Forms.Button clearSelectionButton;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.ComboBox cmbSearch;
+        private System.Windows.Forms.Button btnClear;
     }
 }
 
